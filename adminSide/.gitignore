@@ -1,0 +1,11 @@
+**/migrations/
+
+__init__.py
+**/migrations
+**/media
+**/__pycache__
+*.pyc
+.DS_Store
+*.xlsx
+/st/static_new
+tests.py

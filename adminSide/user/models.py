@@ -4,14 +4,9 @@ from user import utils
 # Create your models here.
 class AppUser(models.Model):
     user_id = models.AutoField(primary_key= True)
-    email = models.EmailField(max_length=70,blank=True, null= True, unique= True)
-    password = models.CharField(max_length=255,null=True,blank=True)
     mobile_number = models.CharField(max_length=30)
     first_name = models.CharField(max_length=255 )
-    midddle_name = models.CharField(max_length=255,  blank=True, null=True )
     last_name = models.CharField(max_length=255, blank=True, null=True)
-    aadhar_number = models.CharField(max_length=250, blank=True, null=True )
-    education = models.CharField(max_length=250, choices= utils.EDUCATION, blank=True, null=True )
     category = models.CharField(max_length=250, choices= utils.CATEGORY, blank=True, null=True )
     country = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
@@ -20,6 +15,8 @@ class AppUser(models.Model):
     longitude = models.CharField(max_length= 255)
     referral_key = models.CharField(max_length=70,blank=True, null= True, unique = True)
     refer_count = models.PositiveIntegerField(blank=True, null=True)
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table= 'app_user'

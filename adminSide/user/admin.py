@@ -23,7 +23,7 @@ class UserReferralBridgeAdminInline(admin.TabularInline):
 class AppUserAdmin(admin.ModelAdmin):
     menu_title = "App user"
     menu_group = "User"
-    search_fields = ['email']
-    list_filter = ['email', 'mobile_number']
-    list_display = ['user_id', 'email', 'mobile_number', 'aadhar_number']
+    search_fields = ['mobile_number']
+    list_filter = ['category']
+    list_display = ['user_id', 'mobile_number']
     inlines = [UserReferralBridgeAdminInline]
