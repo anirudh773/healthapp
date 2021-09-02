@@ -21,17 +21,4 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
-
-admin.site.site_title = "Docter's Admin Portal"
-admin.site.index_title = "Welcome to Pet Docter's Admin Portal"
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-    import debug_toolbar
-
-    urlpatterns = [
-        path('__debug__/', include(debug_toolbar.urls))
-    ] + urlpatterns
+] +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
