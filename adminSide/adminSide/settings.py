@@ -28,7 +28,7 @@ SECRET_KEY = '4!qgsutgmo=jk047t2k5_c#4&!a=&2%zo80r7dhs0em@d-td+j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-3-138-238-151.us-east-2.compute.amazonaws.com', '127.0.0.1']
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'user',
     'social_links',
     'animalHealthCard',
+    'product',
 ]
 
 MIDDLEWARE = [
