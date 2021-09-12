@@ -7,5 +7,4 @@ __init__.py
 *.pyc
 .DS_Store
 *.xlsx
-/st/static_new
 tests.py
